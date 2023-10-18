@@ -89,7 +89,7 @@ const App = () => {
             />
             {!ads ? 'Loading' : <AdsImage data={ads} posId={1} fetchImage={fetchImage} callback={() => {
                 const currentIndex = data.findIndex(item => item.id === ads.id)
-                const index = currentIndex === data.length - 1 ? 0 : currentIndex + 1
+                const index = currentIndex === data.length - 1 ? fetchAds() : currentIndex + 1
                 setAds(data[index])
             }}/>}
         </>
